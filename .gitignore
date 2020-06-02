@@ -1,0 +1,17 @@
+# Default ignored files
+.classpath
+.project
+.settings
+target
+.idea
+.vscode
+.DS_Store
+.factorypath
+/logs
+*.iml
+node_modules
+test/derby.log
+derby.log
+work
+test/logs
+derby.log
