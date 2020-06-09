@@ -19,15 +19,21 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.translateNum(1));
+        System.out.println(solution.translateNum(506));
     }
 
 
     public int translateNum(int num) {
-
+        int result = 0;
+        if(num < 10){
+            return 1;
+        }
+        int i = num % 100;
+        if(i > 9 && i < 26){
+            result += translateNum(num / 100);
+        }
+        result += translateNum(num / 10);
+        return result;
     }
 
-    translateNum(int num){
-
-    }
 }
