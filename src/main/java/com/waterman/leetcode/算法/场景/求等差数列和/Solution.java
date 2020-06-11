@@ -1,6 +1,4 @@
-package com.waterman.leetcode.算法.求等差数列和;
-
-import javax.crypto.spec.PSource;
+package com.waterman.leetcode.算法.场景.求等差数列和;
 
 /**
  * @author tongdong
