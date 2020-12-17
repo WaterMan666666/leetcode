@@ -1,8 +1,9 @@
 package com.waterman.leetcode.算法.树.对称二叉树;
 
+import com.waterman.leetcode.算法.树.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * @author tongdong
@@ -95,16 +96,5 @@ public class Solution {
             queue.offer(root2.left);
         }
         return true;
-    }
-}
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
     }
 }
