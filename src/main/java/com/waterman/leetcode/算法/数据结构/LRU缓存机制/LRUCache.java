@@ -1,6 +1,7 @@
 package com.waterman.leetcode.算法.数据结构.LRU缓存机制;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -45,6 +46,12 @@ public class LRUCache {
         cache.put(1,1);
         cache.put(4,1);
         System.out.println(cache.get(2));
+        new LinkedHashMap(6,0.75F, true){
+            @Override
+            protected boolean removeEldestEntry(Map.Entry eldest) {
+                return size() > 6;
+            }
+        };
     }
 
 

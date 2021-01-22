@@ -1,5 +1,7 @@
 package com.waterman.leetcode.算法.字符串.最长回文子串;
 
+import java.util.LinkedList;
+
 /**
  * @author tongdong
  * @Date: 2020/5/21
@@ -29,6 +31,27 @@ public class Solution {
      输出: "bb"
      */
     public String longestPalindrome(String s) {
+        char[] ch = s.toCharArray();
+        int n = ch.length;
+        int l = 0;
+        int r = 0;
+        boolean[][] dp = new boolean[n][n];
+        for(int i = ch.length - 2 ; i >= 0 ; i --){
+            dp[i][i] = true;
+            for(int j = i + 1 ; j < ch.length ; j ++) {
+                dp[i][j] = ch[i] == ch[j] && ((j - i < 3) || dp[i - 1][j + 1]);
+                if(dp[i][j] && r - l < j - i){
+                    l = i ;
+                    r = j ;
+                }
+            }
+        }
+        return  s.substring(l, r + 1);
+
+    }
+
+
+    public String longestPalindrome1(String s) {
         String result = "";
         int[] limit = {0, 0};
         char[] ch = s.toCharArray();
